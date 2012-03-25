@@ -1,0 +1,22 @@
+
+.leftIcon{
+	float: left;
+	margin: 2px 2px 2px 8px;
+	}
+	
+.nlink{
+	text-decoration: none;
+	color: white;
+	}
+	
+.ui-widget-content{/* css class for panel content */}
+.ui-corner-bottom{/* css class for panel content cornering */}
+.ui-widget-header {/* css class for panel header */}
+.ui-state-active {/* css class for panel header active state */}
+.ui-state-default {/* css class for panel header default */}
+.ui-state-hover {/* css class for panel header hover */}
+.ui-corner-top {/* css class for panel header cornering */}
+.ui-corner-all{/* css class for panel header cornering */}
+.ui-icon{/* css class for panel header icon */}
+.ui-icon-circle-plus{/* css class for panel header icon closed state */}
+.ui-icon-circle-minus{/* css class for panel header icon open state */}

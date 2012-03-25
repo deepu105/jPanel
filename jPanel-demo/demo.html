@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>jPanel Demo</title>
+		<link href="css/jQuery.jPanel.css" rel="stylesheet" type="text/css"/>
+		<link href="css/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jQuery.jPanel.min.js"></script>
+		<link type="text/css" rel="stylesheet" href="http://jqueryui.com/themes/base/ui.all.css" />
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				//simple jPanel with remote content loading and field set view
+				$('#simpleJRFS').jPanel({
+					'fieldSet'	:true,
+					'remoteDiv'	: true,
+					'effect'	: 'fade',
+					'speed'		: 'slow',
+					'easing'	: 'swing',
+					'cookie'	: true,
+					'cExpires'    : 2
+				});
+
+				$('#t1,#t4').jPanel({
+					
+					"defaultOpen" : true
+					
+				});
+
+				//simple minimal jPanel
+				$('.simpleJ').jPanel();
+
+				//simple minimal jPanel with cookies
+				$('#simpleJC').jPanel({
+					'cookie'	: true,
+					'cExpires'    : 2
+				});
+
+				//simple minimal jPanel with effects configured
+				$('.simpleJE').jPanel({
+					'effect'		: 'fade',
+					'speed'		: 'slow',
+					'easing'		: 'swing'
+				});
+
+				//simple minimal jPanel with remote content
+				$('#simpleJR').jPanel({
+
+					'remoteDiv'	: true
+				});
+
+				//simple jPanel with remote content loading to a target
+				$('#simpleJRT').jPanel({
+
+					'remoteDiv'	: true
+				});
+
+
+				//simple jPanel with remote content with data sent via post
+				$('#simpleJRF').jPanel({
+					'remoteDiv'	: true,
+
+					'ajaxTimeout':500000
+				});
+
+				// tab with cookie and remote content and switch view
+				$('.simpleTab').jPanel({
+					"ajaxTimeout" : 30000,
+					"cookie"		: "true",
+					"defaultView"	: "tab",
+
+					"remoteDiv"	: true,
+					"retainView"	: true,
+					"switchView"	: "true"
+				});
+
+				$('#t3').jPanel({
+					'cookie'	: true,
+					'cExpires'    : 2
+				});
+			
+			  try{
+				$('#switcher').themeswitcher();
+				}catch(err){ 
+				$('#switcher').html('Ooops !!! Couldn\'t load Theme switcher from jQueryUI, Please check your internet connection.').addClass('err');
+				}
+		
+
+			});
+
+		</script>
+		<style type="text/css">
+			/*demo page css*/
+			body{ font: 100% "Trebuchet MS", sans-serif; margin: 50px;}
+			.fakewindowcontain{background-color: #bbb;}
+			.ui-widget-content{padding: 5px 15px 10px 15px;}
+			.err{color: red;}
+		</style>
+	</head>
+	<body>
+		<h2>Welcome to <a href="https://sites.google.com/site/jqpanel/home">jPanel</a> 1.4.0</h2>
+		<p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 50%;">This page 
+		demonstrates the various configurations of jPanel and its usage,  any container element can be used to make a panel eg: DIV, FORM, SPAN, P etc. </p>
+		<p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 50%;">You've 
+		downloaded components and a theme that are compatible with jQuery 1.4+. Please 
+		make sure you are using jQuery 1.4+ in your production environment.</p>
+		<p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 50%;">Styles from jQuery UI is applied by default download a <a
+		href="http://jqueryui.com/home">jQuery UI theme </a>
+		<img width="202" height="60" longdesc="http://docs.jquery.com/Image:Themeroller_ready_white_200px.png" alt="Image:Themeroller_ready_white_200px.png" src="http://docs.jquery.com/images/0/09/Themeroller_ready_white_200px.png">
+<br>Try out these themes using below switcher widget or define styles in the jPanel.css file.
+<div id="switcher"></div></p>
+		<div class="simpleJ" title="Simple Panel:"> 
+			<p>This is a simple panel with default settings.</p>
+			<h3 class="demoHeaders">Mark up</h3>
+			<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+				<div class="ui-overlay"> 
+					<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+     		content here....
+<font color="#009933">	&lt;/div&gt;</font>
+<b><font color="#990000">JS</font>:</b><br>
+	$(<font color="#0000FF">'.class'</font>).jPanel();
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div class="simpleJE" title="Simple Panel with Effects Configured:"> 
+			<p>This is a simple panel with fade effect and slow animation with easing set to swing.</p>
+			<h3 class="demoHeaders">Mark up</h3>
+			<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+				<div class="ui-overlay"> 
+					<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font><font color="#009933">&gt;</font>
+     		content here....
+<font color="#009933">	&lt;/div&gt;</font>
+
+<b><font color="#990000">JS</font>:</b><br>
+	$(<font color="#0000FF">'.class'</font>).jPanel({
+<font color="#0000FF">		'effect'</font>	: <font color="#CC00FF">'fade'</font>,
+<font color="#0000FF">		'speed'</font>		: <font color="#CC00FF">'slow'</font>,
+<font color="#0000FF">		'easing'</font>	: <font color="#CC00FF">'swing'</font>
+	});
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div id="simpleJC" title="Simple Panel with state retention:"> 
+			<p>This is a simple panel with cookie set to true and cookie expiry set to 2 days, refresh your browser to see the difference. </p>
+			<h3 class="demoHeaders">Mark up</h3>
+			<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+				<div class="ui-overlay"> 
+					<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#009933">&gt;</font>
+		content here....
+<font color="#009933">	&lt;/div&gt;</font>
+
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id'</font>).jPanel({
+<font color="#0000FF">		'cookie'</font>	:<font color="#CC00FF">true</font>,
+<font color="#0000FF">		'cExpires'</font>	:<font color="#CC00FF">2</font> <font color="#006600">//optional</font>
+	});
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div id="simpleJR" title="Simple Remote Panel:" href="remoteSimple.html"> 
+
+		</div>
+		<h3 class="demoHeaders">Target for the following panel</h3>
+		<div id="target1"><p>Content here will be overriden with remote content</p></div>
+		<div id="simpleJRT" title="Remote Panel with target:" href="remote.html" target="target1"> 
+			<p>This is a panel with remote data loaded into a target. The content is loaded  via ajax into the target specified (Target can be within or outside the actual panel). </p>
+			<h3 class="demoHeaders">Mark up</h3>
+			<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+				<div class="ui-overlay"> 
+					<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;form</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#FF00FF">action</font>=<font color="#0000FF">"remote.html"</font> <font color="#FF00FF">target</font>=<font color="#0000FF">"targetId"</font> <font color="#009933">&gt;</font>
+		content here....
+<font color="#009933">	&lt;/form&gt;</font>
+
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id'</font>).jPanel({
+<font color="#0000FF">		'remoteDiv'</font>	: <font color="#CC00FF">true</font>
+	});
+					</pre>
+				</div>
+			</div>
+		</div>
+		<div id="simpleJRFS" title="Remote Panel with Fieldset view:" href="remote.html" target="t2"> 
+			<p>This is a panel with remote data loaded  via ajax into a target, panel is set to Fieldset view with cookie and effects configured </p>
+			<div id='t1' title="Inner Panel" >Target for the Outer Panel, and also a nested panel with defaultOpen set to true (While using nested panels it is important to initialize the outer panel before the inner panel, i.e. The panels should be constructed from top down)<div id='t2'></div></div>
+			<h3 class="demoHeaders">Mark up</h3>
+			<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+				<div class="ui-overlay"> 
+					<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Outer Panel Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"outerId"</font> <font color="#FF00FF">action</font>=<font color="#0000FF">"remote.html"</font> <font color="#FF00FF">target</font>=<font color="#0000FF">"targetId"</font> <font color="#009933">&gt;</font>  	
+		some content here....
+	<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Inner Panel Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"innerId"</font> <font color="#009933">&gt;</font>  	
+		<font color="#009933">	&lt;div</font><font color="#FF00FF"> id</font>=<font color="#0000FF">"targetId"</font> <font color="#009933">&gt;</font>  	
+				content here....
+		<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;/div&gt;</font>
+<font color="#009933">	&lt;/div&gt;</font>
+
+<b><font color="#990000">JS</font>:</b> (Please note that the panels has to initiated in the below order to work properly)
+	$(<font color="#0000FF">'#outerId'</font>).jPanel({
+<font color="#0000FF">		"fieldSet"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"effect"</font>	: <font color="#CC00FF"> "fade"</font>,
+<font color="#0000FF">		"speed"</font>		: <font color="#CC00FF"> "slow"</font>,
+<font color="#0000FF">		"remoteDiv"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"easing"</font>	: <font color="#CC00FF"> "swing"</font>,
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"cExpires"</font>	: <font color="#CC00FF"> 2</font>
+
+	});<br>
+	$(<font color="#0000FF">'#innerId'</font>).jPanel({
+<font color="#0000FF">		"defaultOpen"</font>	: <font color="#CC00FF"> true</font>
+
+	});
+					</pre>
+				</div>
+			</div>
+		</div>
+		<form id="simpleJRF" title="Remote Panel with formids and method:" action="remoteForms.html" method="POST" formids="demoform,testform"> 
+
+		</form>
+		<br/>
+		<div id='t4' title="Panels with switch view with Tab view as default"> 
+			<h3 class="demoHeaders">Panels with switch view with Tab view as default wrapped inside another panel</h3>
+			<p>To use the tab view make sure to have all the panel containers(div, span or form) one after the other with out any elements in between them and use a unique class as selector for all the panels to be grouped as tabs.</p>
+			<br/>
+			<div id='tab-1' class="simpleTab" title="Panel 1 from a DIV"> 
+				<p>This is a simple panel formed from a DIV</p>
+				<h3 class="demoHeaders">Mark up</h3>
+				<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+					<div class="ui-overlay"> 
+						<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"wrapperId"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Wrapper Title"</font><font color="#009933">&gt;</font>
+		some content here....
+	<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id1"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;span</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id2"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+		<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Inner Panel Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"innerId"</font> <font color="#009933">&gt;</font>  	
+				Inner panel content here....
+		<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;/span&gt;</font>	
+	<font color="#009933">	&lt;form</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id3"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#FF00FF">action</font>=<font color="#0000FF">"remoteFormsTab.html" </font><font color="#FF00FF">method</font>=<font color="#0000FF">"POST"</font> 
+			<font color="#FF00FF">formids</font>=<font color="#0000FF">"demoform,testform"</font><font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/form&gt;</font>
+<font color="#009933">	&lt;/div&gt;</font>
+<b><font color="#990000">JS</font>:</b> (Please note that the panels has to initiated in the below order to work properly)
+	$(<font color="#0000FF">'#wrapperId'</font>).jPanel({
+<font color="#0000FF">		"defaultOpen"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'.class'</font>).jPanel({
+<font color="#0000FF">		"ajaxTimeout"</font>	: <font color="#CC00FF"> 30000</font>,
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"defaultView"</font>	: <font color="#CC00FF"> "tab"</font>,
+<font color="#0000FF">		"remoteDiv"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"retainView"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"switchView"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'#innerId'</font>).jPanel({
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+						</pre>
+					</div>
+				</div>
+			</div>
+			<span id='tab-2' class="simpleTab" title="Panel 2 from a SPAN:"> 
+				<p>This is a simple panel formed from a SPAN</p>
+				<div id='t3' title="Inner Panel" >LOREM IPSUM SIT AMET....</div>
+				<h3 class="demoHeaders">Mark up</h3>
+
+				<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+					<div class="ui-overlay"> 
+						<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"wrapperId"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Wrapper Title"</font><font color="#009933">&gt;</font>
+		some content here....
+	<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id1"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;span</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id2"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+		<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Inner Panel Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"innerId"</font> <font color="#009933">&gt;</font>  	
+				Inner panel content here....
+		<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;/span&gt;</font>	
+	<font color="#009933">	&lt;form</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id3"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#FF00FF">action</font>=<font color="#0000FF">"remoteFormsTab.html" </font><font color="#FF00FF">method</font>=<font color="#0000FF">"POST"</font> <font color="#FF00FF">
+			formids</font>=<font color="#0000FF">"demoform,testform"</font><font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/form&gt;</font>
+<font color="#009933">	&lt;/div&gt;</font>
+<b><font color="#990000">JS</font>:</b> (Please note that the panels has to initiated in the below order to work properly)
+	$(<font color="#0000FF">'#wrapperId'</font>).jPanel({
+<font color="#0000FF">		"defaultOpen"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'.class'</font>).jPanel({
+<font color="#0000FF">		"ajaxTimeout"</font>	: <font color="#CC00FF"> 30000</font>,
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"defaultView"</font>	: <font color="#CC00FF"> "tab"</font>,
+<font color="#0000FF">		"remoteDiv"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"retainView"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"switchView"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'#innerId'</font>).jPanel({
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+						</pre>
+					</div>
+				</div>
+			</span>
+
+			<form id="simpleJRFT" class="simpleTab" title="Panel 3 from a FORM with remote content:" action="remoteFormsTab.html" method="POST" formids="demoform,testform"> 
+
+
+			</form>
+		</div>
+		For more details visit  
+		<a href="https://sites.google.com/site/jqpanel/home">jPanel Site</a><br>
+		<a href="readme.html">Readme</a><br>
+		<a href="https://sites.google.com/site/jqpanel/settings">Settings</a><br>
+		<a href="https://sites.google.com/site/jqpanel/downloads">Download</a><br>
+		<a href="http://plugins.jquery.com/project/jPanel">Plugin Home</a>
+		<script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Remote content</title>
+</head>
+<body>
+
+<p>This is a simple panel with remote data loading. This content is loaded from a different source via ajax. </p>
+  <h3 class="demoHeaders">Mark up</h3>
+  
+<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+  <div class="ui-overlay"> 
+    <pre>
+<b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#FF00FF">href</font>=<font color="#0000FF">"remoteSimple.html"</font> <font color="#009933">&gt;</font>
+		content here....
+<font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id'</font>).jPanel({
+		<font color="#0000FF">'remoteDiv'</font>	: <font color="#CC00FF">true</font>
+	});
+						</pre>
+  </div>
+</div>
+
+</body>
+</html>

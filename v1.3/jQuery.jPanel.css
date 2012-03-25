@@ -1,0 +1,38 @@
+
+.leftIcon{
+	float: left;
+	margin: 2px 2px 2px 8px;
+	}
+	
+.nlink{
+	text-decoration: none;
+	color: white;
+	}
+	
+.jPanelSwitch{
+	font-size: 10px;
+    width: auto;
+	margin:2px;
+}
+.jPanelSwitchItem{
+
+}
+.ui-widget-content{/* css class for panel content */}
+.ui-corner-bottom{/* css class for panel content cornering */}
+.ui-widget-header {/* css class for panel header */}
+.ui-state-active {/* css class for panel header active state */}
+.ui-state-default {/* css class for panel header default */}
+.ui-state-hover {/* css class for panel header hover */}
+.ui-corner-top {/* css class for panel header cornering */}
+.ui-corner-all{/* css class for panel header cornering */}
+.ui-icon{/* css class for panel header icon */}
+.ui-icon-circle-plus{/* css class for panel header icon closed state */}
+.ui-icon-circle-minus{/* css class for panel header icon open state */}
+
+.ui-tabs-nav{/* css class for tab navigation panel */}
+.ui-helper-reset{/* css class for tab header allignment */}
+.ui-helper-clearfix{/* css class for tab header allignment */}
+.ui-tabs{/* css class for tab */}
+.ui-tabs-panel{/* css class for tab content*/}
+.ui-widget{ /* css class for tab */}
+.ui-tabs-selected{ /* css class for tab selected */}

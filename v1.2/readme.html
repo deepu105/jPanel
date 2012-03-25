@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Readme</title>
+<style type="text/css">
+			/*demo page css*/
+			body{ font: 100% "Trebuchet MS", sans-serif; margin: 50px;}
+			.fakewindowcontain{background-color: #bbb;}
+			.ui-widget-content{padding: 5px 15px 10px 15px;}
+
+		</style>
+</head>
+<body><h2><a href="https://sites.google.com/site/jqpanel/home">jPanel</a> 1.2.1</h2>
+<p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 50%;"> jPanel by Deepu KS deepu.ks@tcs.com
+  <br>Copyright (c) 2011 Deepu KS<br>Dual licensed under the MIT and GPL licenses:<br>http://www.opensource.org/licenses/mit-license.php<br>http://www.gnu.org/licenses/gpl.html<br>Version 1.2.1 09.10.11 </p>
+<p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 50%;">You've 
+  downloaded components and a theme that are compatible with jQuery 1.3+. Please 
+  make sure you are using jQuery 1.3+ in your production environment.</p>
+  <p style="font-size: 1em; line-height: 1.5; margin: 1em 0; width: 526px;">Styles from jQuery UI is applied by default download a <a href="http://jqueryui.com/home">jQuery UI theme </a>or define styles in the jPanel.css file.<br>Any container element can be used to make a panel eg: DIV, FORM, SPAN etc.</p>
+  For more details visit  
+<a href="https://sites.google.com/site/jqpanel/home">jPanel Site</a><br>
+<a href="https://sites.google.com/site/jqpanel/downloads">Download</a><br>
+<a href="http://plugins.jquery.com/project/jPanel">Plugin Home</a>
+<div>
+<h3>Settings:</h3>
+<h4>Options:</h4>
+<table style="border-collapse:collapse;border-color:rgb(136, 136, 136);border-width:1px" border="1" bordercolor="#888" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Option</b></font></td>
+<td style="width:60px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Type</b></font></td>
+<td style="width:342px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Description<span>&nbsp;&nbsp;&nbsp;</span></b></font></td>
+<td style="width:101px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Values</b></font></td>
+<td style="width:111px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Dependencies</b></font></td>
+<td style="width:60px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)">&nbsp;<font size="3"><b>Default</b></font></td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;effect <br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String<span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp;</span></td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use specified values for animation effect while opening and closing the panel, use none to disable animation<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;slide, fade or none</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;none</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;slide</td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;speed</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String<span>&nbsp;&nbsp; &nbsp;</span></td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use to specify animation speed</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;slow, fast or medium<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;effect must not be none<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;medium</td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;easing</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use to specify animation easing</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;none,swing or linear</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;effect must not be none</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;none</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;<i>cookie</i> </td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;boolean</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;Enable to retain panel state using cookie, by default state is preserved over session, to extend over days use @option <span style="color:rgb(39, 78, 19)">cExpires</span> to provide no. of days or a date. <br>
+&nbsp;Note: To use cookies every Div used for panels has to have a unique ID</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;true or false</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;id attibute of the div used<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;false</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;cExpires<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;Object<br>
+</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;Either an integer specifying the expiration date for cookies from now on in days or a Date object.<br>
+&nbsp;If a negative value is specified (e.g. a date in the past), the cookie will be deleted.<br>
+&nbsp;If set to null or omitted, the cookie will be a session cookie and will not be retained when the the browser exits.</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;Integer number or Date object<br>
+</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;cookie must be set to true<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;null</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;remoteDiv <br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;boolean</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;Enable to use ajax loading of content into the div from the specified href @attribute, if a target @attribute is set then data will be loaded there else data in the actual div will be overwritten.<br>
+&nbsp;If a formids @attribute (multiple values separated by comma)is specified then the forms in the page with the id in formids will be serialized and sent as data in the ajax request.<br>
+&nbsp;Note: The href @attribute is mandatory for ajax loading to work, provide action name in href, request will be sent as GET, both target @attribute and formids @attribute are optional. <br>
+</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;true or false<br>
+</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;href attribute must be set on the div used for panel<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;false</td>
+</tr>
+
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;ajaxTimeout</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;number</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Set to override the timeout for the ajax request<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;time in milliseconds<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;remoteDiv must be set to true</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;30000</td>
+</tr>
+</tbody>
+</table>
+<br><h4>Attributes:</h4>
+
+<table style="border-collapse:collapse;border-color:rgb(136, 136, 136);border-width:1px" border="1" bordercolor="#888" cellspacing="0">
+<tbody>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Attribute</b></font></td>
+<td style="width:60px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Type</b></font></td>
+<td style="width:342px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Description<span>&nbsp;&nbsp;&nbsp;</span></b></font></td>
+<td style="width:101px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Values</b></font></td>
+<td style="width:111px;height:16px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)"><font size="3"><b>&nbsp;Dependencies</b></font></td>
+<td style="width:60px;background-color:rgb(106, 168, 79);color:rgb(255, 255, 255)">&nbsp;<font size="3"><b>Default</b></font></td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;href/action <br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String<span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp; &nbsp;</span><span>&nbsp;&nbsp;</span></td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use href attibute to provide the url, page or action from where content has to fetched in remoteDiv mode.<br>
+Note: This attribute is mandatory for Remote content loading. href has precedence over action attribute<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;action or url in same domain</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;remoteDiv must be set to true</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;none</td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;target</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String<span>&nbsp;&nbsp; &nbsp;</span></td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use to specify a different target than the same Panel.<br>
+Note: If target is not specified the inner contents of the panel will be replaced by remote content.</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;target element id where the remote content will be loaded<br>
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;remoteDiv must be set to true and href attribute must be set on the div used for panel
+</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;self</td>
+</tr>
+<tr>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;formids</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;String</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;Use to specify which form data to be serialized and sent for remote data loading.<br>
+Note: All the data will be encoded and sent.</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;comma separated id's of the forms to serialize</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;remoteDiv must be set to true and href attribute must be set on the div used for panel</td>
+<td style="background-color:rgb(217, 234, 211)">&nbsp;none</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;<i>method</i> </td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;String</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;Use to specify a request method type for ajax.</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;GET or POST</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;remoteDiv must be set to true and href attribute must be set on the div used for panel
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;GET</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;id<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;String
+</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;The id for the panel, used as key for cookies.<br>
+&nbsp;Note: It is mandatory for cookies to work.</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;any string<br>
+</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">none<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;none</td>
+</tr>
+<tr>
+<td style="width:129px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;title<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;String</td>
+<td style="width:342px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;The Title to be rendered on the panel.<br>
+</td>
+<td style="width:101px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;any string<br>
+</td>
+<td style="width:111px;height:16px;background-color:rgb(217, 234, 211)">&nbsp;none<br>
+</td>
+<td style="width:60px;background-color:rgb(217, 234, 211)">&nbsp;none</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+<h3 class="demoHeaders">Usage:</h3>
+<div class="simpleJ" title="Simple Panel:"> 
+<p>Simple panel with default settings.</p>
+  <h5 class="demoHeaders">Mark up</h5>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+    <div class="ui-overlay"> 
+      <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'.class</font>).jPanel();
+						</pre>
+    </div>
+  </div>
+</div>
+<div class="simpleJE" title="Simple Panel with Effects Configured:"> 
+<p>Simple panel with fade effect and slow animation with easing set to swing.</p>
+  <h5 class="demoHeaders">Mark up</h5>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+    <div class="ui-overlay"> 
+      <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font><font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'.class</font>).jPanel({
+		<font color="#0000FF">'effect'</font>	: <font color="#CC00FF">'fade'</font>,<br>		<font color="#0000FF">'speed'</font>		: <font color="#CC00FF">'slow'</font>,<br>		<font color="#0000FF">'easing'</font>	: <font color="#CC00FF">'swing'</font>
+	});
+						</pre>
+    </div>
+  </div>
+</div>
+<div id="simpleJC" title="Simple Panel with state retention:"> 
+<p>Simple panel with cookie set to true and cookie expiry set to 2 days.</p>
+  <h5 class="demoHeaders">Mark up</h5>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+    <div class="ui-overlay"> 
+      <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id</font>).jPanel({
+		<font color="#0000FF">'cookie'</font>	: <font color="#CC00FF">true</font>,<br>		<font color="#0000FF">'cExpires'</font>  : <font color="#CC00FF">2</font> <font color="#006600">//optional</font>
+	});
+						</pre>
+    </div>
+  </div>
+</div>
+<div id="simpleJR" title="Simple Remote Panel:" > 
+<p>Simple panel with remote data loading. </p>
+  <h5 class="demoHeaders">Mark up</h5>
+  
+<div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+  <div class="ui-overlay"> 
+    <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#FF00FF">href</font>=<font color="#0000FF">"remoteSimple.html"</font> <font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id'</font>).jPanel({
+		<font color="#0000FF">'remoteDiv'</font>	: <font color="#CC00FF">true</font>
+	});
+						</pre>
+  </div>
+</div>
+</div>
+<div id="simpleJRT" title="Remote Panel with target:"> 
+<p>Panel with remote data loaded into a target. The content is loaded  via ajax into the target specified (Target can be within or outside the actual panel). </p>
+  <h5 class="demoHeaders">Mark up</h5>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+    <div class="ui-overlay"> 
+      <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#FF00FF">href</font>=<font color="#0000FF">"remote.html"</font> <font color="#FF00FF">target</font>=<font color="#0000FF">"targetId"</font> <font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id</font>).jPanel({
+		<font color="#0000FF">'remoteDiv'</font>	: <font color="#CC00FF">true</font>
+	});
+						</pre>
+    </div>
+  </div>
+</div>
+<div id="simpleJRF" title="Remote Panel with formids and method:" > 
+<p>Panel with remote data loading. The content is loaded from a different 
+  source via ajax through POST and the specified form data are sent to the href 
+  url as data. <br/>The ajaxTimeout option allows you to set time out in milliseconds for the request. </p>
+  <h3 class="demoHeaders">Mark up</h3>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+    
+  <div class="ui-overlay"> 
+    <pre><b><font color="#990000">HTML</font>:</b><br><font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"id"</font> <font color="#FF00FF">href</font>=<font color="#0000FF">"remoteForms.html"</font> <font color="#FF00FF"> formids</font>=<font color="#0000FF">"form1,form2"</font> <font color="#009933"> </font><font color="#FF00FF">method</font>=<font color="#0000FF">"POST"</font> <font color="#009933">&gt;</font><br>     	content here....<br><font color="#009933">	&lt;/div&gt;</font>
+			
+<b><font color="#990000">JS</font>:</b>
+	$(<font color="#0000FF">'#id'</font>).jPanel({
+		<font color="#0000FF">'remoteDiv'</font>	: <font color="#CC00FF">true</font>,
+		<font color="#0000FF">'ajaxTimeout'</font> : <font color="#CC00FF">50000</font>
+	});
+						</pre>
+  </div>
+  </div><br><br>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Remote content</title>
+</head>
+<body>
+
+<p>This is a panel with remote data loading. This content is loaded from a different 
+  source via ajax through POST and the specified form data are sent to the href 
+  url as data. <br/>The ajaxTimeout option allows you to set time out in milliseconds for the request. </p>
+  <h3 class="demoHeaders">Mark up</h3>
+  <div style="position: relative; width: 92%; height: auto; padding:1% 4%; overflow:hidden;" class="fakewindowcontain"> 
+ <div class="ui-overlay"> 
+      						<pre>
+<b><font color="#990000">HTML</font>:</b><br>
+<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"wrapperId"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Wrapper Title"</font><font color="#009933">&gt;</font>
+		some content here....
+	<font color="#009933">	&lt;div</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id1"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;span</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id2"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#009933">&gt;</font>
+			content here....
+		<font color="#009933">	&lt;div</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Inner Panel Title"</font> <font color="#FF00FF">id</font>=<font color="#0000FF">"innerId"</font> <font color="#009933">&gt;</font>  	
+				Inner panel content here....
+		<font color="#009933">	&lt;/div&gt;</font>
+	<font color="#009933">	&lt;/span&gt;</font>	
+	<font color="#009933">	&lt;form</font> <font color="#FF00FF">id<font color="#000000">=</font></font><font color="#0000FF">"id3"</font> <font color="#FF00FF">title<font color="#000000">=</font></font><font color="#0000FF">"Title"</font> <font color="#FF00FF">class</font>=<font color="#0000FF">"class"</font> <font color="#FF00FF">action</font>=<font color="#0000FF">"remoteFormsTab.html" </font><font color="#FF00FF">method</font>=<font color="#0000FF">"POST"</font> <font color="#FF00FF">
+			formids</font>=<font color="#0000FF">"demoform,testform"</font><font color="#009933">&gt;</font>
+			content here....
+	<font color="#009933">	&lt;/form&gt;</font>
+<font color="#009933">	&lt;/div&gt;</font>
+<b><font color="#990000">JS</font>:</b> (Please note that the panels has to initiated in the below order to work properly)
+	$(<font color="#0000FF">'#wrapperId'</font>).jPanel({
+<font color="#0000FF">		"defaultOpen"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'.class'</font>).jPanel({
+<font color="#0000FF">		"ajaxTimeout"</font>	: <font color="#CC00FF"> 30000</font>,
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"defaultView"</font>	: <font color="#CC00FF"> "tab"</font>,
+<font color="#0000FF">		"remoteDiv"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"retainView"</font>	: <font color="#CC00FF"> true</font>,
+<font color="#0000FF">		"switchView"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+	$(<font color="#0000FF">'#innerId'</font>).jPanel({
+<font color="#0000FF">		"cookie"</font>	: <font color="#CC00FF"> true</font>
+	});<br>
+						</pre>
+    </div>
+  </div>
+
+</body>
+</html>
