@@ -25,11 +25,14 @@ Features
 Version & Licence
 --------------------------------------
 
-jPanel by Deepu KS deepu.ks@tcs.com, d4udts@gmail.com 
-Copyright (c) 2012 Deepu KS
-Dual licensed under the MIT and GPL licenses:
+jPanel by Deepu KS deepu.ks@tcs.com, d4udts@gmail.com
+
+Copyright (c) 2012 Deepu KS, Dual licensed under the MIT and GPL licenses:
+
 [MIT-license](http://www.opensource.org/licenses/mit-license.php)
+
 [GPL-license](http://www.gnu.org/licenses/gpl.html)
+
 Version 1.4.0 26.03.2012
 
 
