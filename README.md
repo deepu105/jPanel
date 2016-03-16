@@ -1,4 +1,5 @@
 [jPanel](https://sites.google.com/site/jqpanel/) - jQuery Collapsible Panel/Tab/Fieldset with Cookie and Remoting support 
+(NOT MAINTAINED ANYMORE)
 ==================================================
 
 About
